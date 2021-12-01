@@ -1,0 +1,2 @@
+u -> w / _[aeiou]
+i -> y / _[aeiou]
