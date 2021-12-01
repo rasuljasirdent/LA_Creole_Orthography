@@ -1,0 +1,44 @@
+%Rasul Dent KV-to-IPA preprocessing rules 2021
+::oral:: = a|e|é|è|i|o|ò|ou|u
+::nasalized:: = ɑ̃|ɛ̃|ɔ̃|œ̃
+::vowel:: = ::oral::|::nasalized::
+::nasalizer:: = n|m
+
+ñ -> ɲ / _
+ng -> ŋ / _ #
+%The order of these rules is very important.
+%First break up nasalizer in these contexts
+n -> 1 /  (::oral::) _ (::oral::)
+m -> 2 / (::oral::) _ (::oral::)
+n -> 1 / ou _
+n-> 1 / _ ɲ
+m -> 2 / ou _
+n -> q / (a|i) _ n
+m -> q / (a|i) _ m
+
+%Then do the main rules
+(::nasalizer::) -> œ̃ / u _ 
+(::nasalizer::) -> ɔ̃ / o _
+(::nasalizer::) -> ɛ̃ /  i _
+(::nasalizer::) -> ɑ̃ / (a|e) _
+
+%Handle the special cases
+a -> ɑ̃ / _ɲ|ŋ
+n -> ɑ̃ / ò _ n
+n -> ɛ̃ / è _ n
+
+%Get rid of the original vowel and nasalization breaks
+(::oral::) -> 0 / _ (::nasalized::)
+1 -> n / u_
+1 -> n / _ɲ
+1 -> n / _ (::vowel::)
+2 -> m / u_
+2 -> m / _ (::vowel::)
+q -> 0 / _ (::nasalizer::)
+
+
+%May or may not want to get rid of apostrophes
+'|’ -> 0 / _
+
+
+
