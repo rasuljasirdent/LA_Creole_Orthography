@@ -1,0 +1,23 @@
+::oral:: = a|e|è|i|o|ò|(ou)
+::nasalized:: = ɑ̃|ɛ̃|ɔ̃
+::vowel:: = ::oral::|::nasalized::
+::nasalizer:: = (n|m)
+
+%semivowel
+u -> w / _ i
+
+%The order of these rules is very important.
+%First break up nasalizer in these contexts
+n -> 1 /  (::oral::) _ (::oral::)
+m -> 2 / (::oral::) _ (::oral::)
+
+%Then do the main rules
+(::nasalizer::) -> ɔ̃ / o|ò_
+(::nasalizer::) -> ɛ̃ / e_
+(::nasalizer::) -> ɑ̃ / a_
+
+%Get rid of the original vowel and nasalization breaker
+(::oral::) -> 0 / _ (::nasalized::)
+1 -> n / _ (::vowel::)
+2 -> m / _ (::vowel::)
+
