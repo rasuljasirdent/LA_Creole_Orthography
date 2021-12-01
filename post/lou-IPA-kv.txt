@@ -1,0 +1,47 @@
+%Post processing
+::oral:: = a|e|é|è|i|o|ò|ou|u
+::nasalized:: = ɑ̃|ɛ̃|ɔ̃|œ̃
+::vowel:: = ::oral::|::nasalized::
+
+é̂|(e8)-> ê / (m|l|t|s|d|c)_
+
+ò̀ -> ò / _
+ou -> w / _::vowel::
+ii -> iy / _
+i -> y / _::vowel::
+
+ɥ -> w / _
+i ->ï / ::vowel::_ 
+ï -> yi / e|é_
+
+
+
+
+%Normalize some special cases
+òlé -> olé / _(\W|\s|#)
+k -> ke / (\W|\s|#)_(\W|\s|#)
+d -> de / (\W|\s|#)_(\W|\s|#)
+s -> se / (\W|\s|#)_(\W|\s|#)
+tenp-> temp / _
+oum-> un / (\W|\s|#)_(\W|\s|#)
+swasent -> swasant / _
+sinkent -> sinkant / _
+kenponñ -> kamponñ / _
+men-> mam / _zèl
+tendi -> tandi / _
+emba -> enba / _(\W|\s|#)
+dinyèl -> dimyèl / _
+piman -> pimen / _(\W|\s|#)
+konsonmé -> konsommé / _
+gren -> gran / _(\W|\s|#|-)
+labitem -> labitan / _
+zenmi -> zanmi / _
+aprè -> apré / _(\W|\s|#)
+
+%Common contractions
+olé -> ’olé / (m|t|l|n|p)_(\s|#)
+apr*é -> ’apé / (m|t|l|n|s|p|k)_(\s|#)
+alé -> ’alé / (m|t|l|n)_(\s|#)
+
+
+
