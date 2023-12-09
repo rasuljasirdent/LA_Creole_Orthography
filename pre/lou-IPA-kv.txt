@@ -1,0 +1,85 @@
+::boundary:: = (#|\W)
+::consonant:: = b|h|d|f|g|j|k|l|m|n|p|r|s|t|v|w|z
+
+ã -> ɑ̃ / _
+ə̃ -> ɛ̃ / _
+e -> é / _
+
+s -> ç / ::boundary::_(a|é)::boundary::
+s -> ç / ::boundary::_(’)a(l|p)(é*)::boundary::
+s -> ç / ::boundary::_(a|i)(la*)::boundary::
+
+n-> nn / (a|i|ɛ|ò)_::boundary::
+m-> mm / (a|i|ɛ|ò)_::boundary::
+nj -> ñ / _
+
+
+% mid
+ɛ̃[1-2]* -> èn /_n
+ɛ̃1 -> im / _
+ɛ̃2 -> in / _
+ɛ̃ -> im / f_
+ɛ̃ -> in / _
+
+ɔœ̃ ->œ̃ / _
+œ̃ -> yn / m* _::boundary::
+œ̃ -> ym / _
+
+ɔ̃1 -> on / _
+%special override
+ɔ̃2 -> on / _ m 
+ɔ̃2 -> om / _
+ɔ̃ -> om / _(b|p)
+ɔ̃ -> om / k_::boundary::
+ɔ̃ -> om / n_-
+ɔ̃ -> om / -n_
+ɔ̃ -> on / _
+
+% low
+ɑ̃(1|3) -> òn /_ n
+ɑ̃1 -> an / _ m
+ɑ̃1 -> an / _
+ɑ̃2 -> en / _
+ɑ̃3 -> am / _
+ɑ̃4 -> en / _ m|n
+ɑ̃4 -> em / _
+
+ɑ̃ -> a / _ (ɲ|ŋ)
+ɑ̃ -> an / av_::boundary::
+ɑ̃ -> an / t_t::boundary::
+ɑ̃ -> an / (z|n)_::boundary::
+ɑ̃ -> an / és_s
+ɑ̃ -> en / ko(m|n(t|m))_
+ɑ̃ -> òn / (k|j)_n
+ɑ̃ -> an / it_::boundary:
+ɑ̃ -> em / t_::boundary::
+ɑ̃ -> an / k_::boundary::
+ɑ̃ -> an / (vaj|mom|(dj*))_
+ɑ̃ -> an / ʃ_(m|s)::boundary::
+ɑ̃ -> an / _g
+ɑ̃ -> an / [ʒ]m_
+ɑ̃ -> en / _n|(d|s)::boundary::
+ɑ̃ -> em / _b
+ɑ̃ -> an / _(ʃ|ʒ|mb)
+ɑ̃ -> an / (p|j)_s
+ɑ̃ -> en / tr_t
+ɑ̃ -> an / (pl)|r_t
+ɑ̃ -> an / v_t
+ɑ̃ -> an / (l|m)_(k|d)
+ɑ̃ -> an / _dal
+ɑ̃ -> an / _::boundary::
+ɑ̃ -> en / _
+
+o-> ô / ::boundary::s_::boundary::
+%a ->á / ::boundary::l_\?
+%a ->á / ::boundary::ç_la
+
+ɑ -> a / _
+
+
+
+
+
+
+
+
